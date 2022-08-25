@@ -103,6 +103,7 @@ let generateFN = () => {
 	}
 };
 
+
 let pickWords = () => {
 	for (let i = 0; pickedWords.length < levelOfDifficulty; i++) {
 		rand = Math.random() * hardWords.length;
