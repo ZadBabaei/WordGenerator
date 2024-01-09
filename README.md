@@ -1,5 +1,5 @@
 
-# Words Game Helper Website
+# Word Generator
 
 ## Overview
 This website is designed to assist friends in generating random words for playing the game 'Words.' It leverages HTML, CSS, and JavaScript to efficiently produce a variety of words.
