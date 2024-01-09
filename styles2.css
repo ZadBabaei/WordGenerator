@@ -1,0 +1,136 @@
+/* Reset some basic elements */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a universal box-sizing rule */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #000;
+}
+
+.logo {
+    background: #ff69b4;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.intro {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.intro h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    color: #d4d4d4;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin: 0.5rem;
+    color: #1a1a1a;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #ff69b4;
+}
+/* Add previous CSS code here */
+
+/* New styles for the modified layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+
+.intro {
+    flex: 1;
+    padding-right: 2rem; /* Adjust as needed */
+}
+
+.image-container {
+    flex: 1;
+    text-align: right; /* Adjust as needed */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 60vh;
+}
+
+footer.social-links {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments might be needed here */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .image-container {
+        text-align: center;
+        order: -1; /* To ensure the image is above the text on smaller screens */
+    }
+
+    .intro {
+        padding-right: 0;
+    }
+}

@@ -43,6 +43,8 @@ let levelOfDifficulty = 0;
 let numberOfPlayers = 0;
 let maxNumOfWords = 0;
 let load = true;
+let printWords = document.getElementById("words-to-print");
+
 
 let generateFN = () => {
 	numberOfPlayers = document.getElementById("numberOfPlayers").value;
@@ -69,7 +71,6 @@ let generateFN = () => {
 	} else {
 		load = true;
 	}
-	let printWords = document.getElementById("words-to-print");
 	levelOfDifficulty = document.getElementById("diffLevel").value;
 	if (!levelOfDifficulty) {
 		alert("Level of difficulty can not be empty ");
@@ -90,8 +91,7 @@ let generateFN = () => {
 		generateWords.style.display = "block";
 	}
 
-	console.log("level of diff", levelOfDifficulty);
-	console.log("numberOfWords", numberOfWords);
+	
 	// if (levelOfDifficulty > numberOfWords) {
 	// 	alert(" The level of difficulty should be less than or equal to the number of words");
 	//     generateWords.style.display = "none";
@@ -121,3 +121,11 @@ let pickWords = () => {
 		}
 	}
 };
+let reloadFN = () => {
+printWords.innerHTML = "";	
+pickedWords=[];
+pickWords();
+	for (i = 0; i < numberOfWords; i++) {
+		printWords.innerHTML += `<li> ${pickedWords[i]}  </li>`;
+	}
+}
