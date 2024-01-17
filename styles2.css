@@ -10,17 +10,15 @@ body, h1, p {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background: #1a1a1a;
     color: #ffffff;
     margin: 0;
     padding: 0;
-}
-
-.header {
-    text-align: center;
-    padding: 2rem;
 }
 
 .navbar {
@@ -45,58 +43,64 @@ body {
     font-size: 0.9rem;
 }
 
+.container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex: 1 0 auto; /* Flex-grow, flex-shrink, and flex-basis */
+    position: relative;
+}
+
+#particles-js {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+bottom: 0;
+z-index: -5; /* Lower z-index since it's the background */
+}
+
+.content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2rem;
+position: relative;
+z-index: 2; /* Higher z-index to be on top /
+/ Other styling as needed */
+}
+
 .intro {
-    text-align: center;
-    padding: 5rem 0;
+height: 100%;
+flex: 1;
+padding-right: 1rem; /* Adjust as needed */
+
 }
 
 .intro h1 {
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+color: #fff;
+font-size: 2.5rem;
+margin-bottom: 0.5rem;
 }
 
 .intro p {
-    color: #d4d4d4;
-    margin-bottom: 2rem;
+color: #d4d4d4;
+margin-bottom: 2rem;
+}
+.start-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff69b4; /* Or any color you prefer */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above the particles */
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icon {
-    display: block;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    margin: 0.5rem;
-    color: #1a1a1a;
-    background: #fff;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.social-icon:hover {
-    background: #ff69b4;
-}
-/* Add previous CSS code here */
-
-/* New styles for the modified layout */
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem;
-}
-
-.intro {
-    flex: 1;
-    padding-right: 2rem; /* Adjust as needed */
+.start-button:hover {
+    background-color: #e35d9a; /* Slightly darker shade for hover state */
 }
 
 .image-container {
@@ -109,28 +113,41 @@ body {
     height: 60vh;
 }
 
-footer.social-links {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.social-links {
+flex-shrink: 0;
+display: flex;
+justify-content: center;
+padding: 1rem;
+background: #333;
+color: #fff;
+position: relative; /* Changed from absolute to relative */
 }
 
-/* Responsive adjustments might be needed here */
+.social-icon {
+display: block;
+width: 2.5rem;
+height: 2.5rem;
+line-height: 2.5rem;
+margin: 0.5rem;
+color: #1a1a1a;
+background: #fff;
+border-radius: 50%;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+background: #ff69b4;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
-
-    .image-container {
-        text-align: center;
-        order: -1; /* To ensure the image is above the text on smaller screens */
-    }
-
-    .intro {
-        padding-right: 0;
-    }
+.content {
+flex-direction: column;
+}
+.image-container {
+    order: -1; /* Image above the text on smaller screens */
+}
 }

@@ -1,3 +1,6 @@
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+
+
 let easyWords = [
 	"شناسنامه",
 	"دنده  ",
