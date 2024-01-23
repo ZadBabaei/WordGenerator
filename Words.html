@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Word Generator</title>
+</head>
+<body>
+    
+     <header>
+        <nav class="navbar">
+            <div class="logo">ZB</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="./index.html">Home</a>
+                <a href="./page1.html">Words</a>
+                <a href="#ruls">rules</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="text-title">
+        <img src="./graphic01 .png" alt=" text-Icon">
+        <h1>
+            Word Generator
+        </h1>
+    </div>
+        <div class="card-holder">
+            <div class="left-card">
+                <div class="inner-left">
+                    <div class="input-container">
+                        <div class="text-and-lable">
+                            <label>Number of players:</label>
+                            <input type="number" name="" id="numberOfPlayers">
+                        </div>
+                        <div  class="text-and-lable">
+                            <label>Number of words:</label>
+                            <input type="number" name="" id="numWords">
+                        </div>
+                        <div  class="text-and-lable">
+                            <label>Select the difficultly Level:</label>
+                            <input type="number" name="" id="diffLevel">
+                        </div>
+                    </div>  
+                    <button id="generate" onclick="generateFN()"  class="btn-generate-word"> Generate</button>    
+                </div>
+            </div>
+            <div id="rightCard" class="right-card">
+                <div class="inner-right">
+                    <ul id="words-to-print" class="word-list">                                       
+                    </ul>
+                    <div class="btn-check">
+                        <button id="orddeer" onclick="reloadFN()"  class="btn-generate-word"> Reload</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="App.js" >
+    </script>
+</body>
+</html>
