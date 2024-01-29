@@ -9,54 +9,54 @@
 </head>
 <body>
     
-     <header>
+    <header>
         <nav class="navbar">
             <div class="logo">ZB</div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="./index.html">Home</a>
                 <a href="./page1.html">Words</a>
-                <a href="#ruls">rules</a>
+                <a href="./clock.html">Timer</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
-    </header>
-    <div class="text-title">
-        <img src="./graphic01 .png" alt=" text-Icon">
-        <h1>
-            Word Generator
-        </h1>
-    </div>
-        <div class="card-holder">
-            <div class="left-card">
-                <div class="inner-left">
-                    <div class="input-container">
-                        <div class="text-and-lable">
-                            <label>Number of players:</label>
-                            <input type="number" name="" id="numberOfPlayers">
-                        </div>
-                        <div  class="text-and-lable">
-                            <label>Number of words:</label>
-                            <input type="number" name="" id="numWords">
-                        </div>
-                        <div  class="text-and-lable">
-                            <label>Select the difficultly Level:</label>
-                            <input type="number" name="" id="diffLevel">
-                        </div>
-                    </div>  
-                    <button id="generate" onclick="generateFN()"  class="btn-generate-word"> Generate</button>    
-                </div>
-            </div>
-            <div id="rightCard" class="right-card">
-                <div class="inner-right">
-                    <ul id="words-to-print" class="word-list">                                       
-                    </ul>
-                    <div class="btn-check">
-                        <button id="orddeer" onclick="reloadFN()"  class="btn-generate-word"> Reload</button>  
-                    </div>
-                </div>
-            </div>
+<div class="topPageInput">
+        <div class="name-input">
+            <label for="playerName">Player’s Name:</label>
+            <input type="text" id="playerName">
         </div>
+        <div class="lang-farsi">
+            <p id="farsi">Farsi</p>
+        </div>
+        <div class="lang-eng">
+            <p id = "eng ">English</p>
+        </div>
+                </div>
+
+        <div class="word-list"  id="rightCard">
+            <div class="word">1- Word 1</div>
+            <div class="word">2- Word 2</div>
+            <div class="word">3- Word 3</div>
+            <div class="word">4- Word 4</div>
+            <div class="word">5- Word 5</div>
+            <div class="word">6- Word 6</div>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="generate" onclick="generateFN()">Generate</button>
+            <button class="btn" id="reload">reload</button>
+            <button class="btn" id="select">Select</button>
+        </div>
+    </div>
+    </div>
+
+        <footer class="social-links">
+        <!-- Icons for social links can be added here -->
+        <a href="#" class="social-icon">In</a>
+        <a href="#" class="social-icon">TW</a>
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">RD</a>
+        <a href="#" class="social-icon">GH</a>
+    </footer>
 
     <script src="App.js" >
     </script>

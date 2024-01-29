@@ -44,10 +44,56 @@ body {
 }
 
 .container {
+    flex: 1;
     margin-left: 2rem;
     margin-right: 2rem;
-    flex: 1 0 auto; /* Flex-grow, flex-shrink, and flex-basis */
-    position: relative;
+}
+label{
+
+	font-size:1.5rem;
+	white-space: normal;
+	word-wrap: break-word;
+	
+}
+.main-container{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40%;
+}
+.sessionStartCrd{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    width:30%;
+    height: 76dvh;
+}
+.text-and-lable{
+    /* width: 10em; */
+	display: inline-flex;
+    flex-grow: 1;
+    justify-content:center;
+    justify-items: center;
+    justify-self: center;
+    align-content:stretch ;
+    gap: 1rem;
+}
+.text-and-lable input{
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #e7dada;
+}
+
+.image-QrCode{
+    display: none;
+    width: 500px;
 }
 
 #particles-js {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles2.css">
+    <title>Session</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GE</div>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./Words.html">Words</a>
+                <a href="./rules.html">Rules</a>
+                <a href="./clock.html">Clock</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="main-container">
+        <div class="sessionStartCrd">
+            <div  class="text-and-lable">
+                <label>Your name:</label>
+                <input type="text" name="" id="name">
+            </div>
+            <div  class="text-and-lable">
+                <label># of players:</label>
+                <input type="number" name="" id="numOfPlayers">
+            </div>       
+            <button class="start-button" id=" start-button" onclick="generateQrCode()" >Start New Session </button>
+        </div>
+        <div class="image-QrCode" id="imageQrCode">
+            <img src="./asset/qrcode_example_1.png" alt="QrCode">
+        </div>
+
+    </div>
+        <footer class="social-links">
+        <!-- Icons for social links can be added here -->
+        <a href="#" class="social-icon">In</a>
+        <a href="#" class="social-icon">TW</a>
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">RD</a>
+        <a href="#" class="social-icon">GH</a>
+    </footer>
+    <script src="./session.js"></script>    
+</body>
+</html>
