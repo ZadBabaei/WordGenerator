@@ -1,5 +1,3 @@
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-
 
 let Fars_easyWords = [
 	"شناسنامه",
@@ -27,20 +25,6 @@ let Fars_easyWords = [
 	" سماور ",
 ];
 
-let hardWords = [
-	"belahat",
-	"beraat",
-	" belaghat",
-	"serafat",
-	"sedaghat",
-	"rohiat",
-	"salsabil",
-	"sharlatan",
-	"mobaien",
-	"nezakat",
-];
-
-// Assuming your easyWords array is something like this:
 const easyWords = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon', 'mango', 'nectarine', 'orange', 'papaya', 'quince', 'raspberry', 'strawberry', 'tangerine', 'watermelon', 'yellowfruit'];
 
 let currentWordList = easyWords;
@@ -64,7 +48,7 @@ function updateWordListDisplay(words) {
   wordListContainer.innerHTML = '';
   // Add new words to the word list container
   words.forEach((word, index) => {
-    const wordElement = document.createElement('div');
+const wordElement = document.createElement('div');
     wordElement.className = 'word';
     wordElement.textContent = `${index + 1}- ${word}`;
     wordListContainer.appendChild(wordElement);
@@ -95,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const generateButton = document.getElementById('generate');
   const reloadButton = document.getElementById('reload');
   const selectButton = document.getElementById('select');
- const englishSelector = document.getElementById('eng'); // Make sure this is the ID of the English p element
-  const farsiSelector = document.getElementById('farsi'); // Make sure this is the ID of the Farsi p element
+ const englishSelector = document.getElementById('eng'); 
+  const farsiSelector = document.getElementById('farsi'); 
 
   generateButton.addEventListener('click', handleGenerateClick);
   reloadButton.addEventListener('click', handleReloadClick);
@@ -105,10 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event listeners for language selection
   englishSelector.addEventListener('click', function() {
     currentWordList = easyWords;
-    // Optionally highlight the active language
     this.classList.add('active-language');
     farsiSelector.classList.remove('active-language');
-    handleWordGeneration(); // Generate words immediately upon language selection
+    handleWordGeneration(); 
   });
 
   farsiSelector.addEventListener('click', function() {
