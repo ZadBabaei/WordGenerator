@@ -30,7 +30,7 @@ const easyWords = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'gr
 let currentWordList = easyWords;
 
 // Function to generate a list of 10 random words
-function generateRandomWords(wordList, count) {
+function FarsiGenerateRandomWords(wordList, count) {
   let words = [];
   for (let i = 0; i < count; i++) {
     // Get a random index based on the length of the wordList
@@ -38,7 +38,7 @@ function generateRandomWords(wordList, count) {
     // Push the word at the random index into the words array
     words.push(wordList[randomIndex]);
   }
-  return words;
+  updateWordListDisplay(words)
 }
 
 // Function to update the word list display
@@ -56,14 +56,34 @@ const wordElement = document.createElement('div');
 }
 
 // Function to handle generate button click
+// function handleGenerateClick() {
+//   const randomWords = generateRandomWords(currentWordList, 10);
+//   updateWordListDisplay(randomWords);
+// }
 function handleGenerateClick() {
-  const randomWords = generateRandomWords(currentWordList, 10);
-  updateWordListDisplay(randomWords);
+    fetch('http://localhost:3000/words/english')
+    .then(response => {
+        console.log(response);
+        return response.json(); // Add return statement here to ensure the next .then() receives JSON
+    })
+    .then(words => {
+        updateWordListDisplay(words);
+    })
+    .catch(error => console.error('Error fetching English words:', error));
+
 }
+
 
 // Function to handle reload button click
 function handleReloadClick() {
-  handleGenerateClick(); // Simply call the handleGenerateClick as it does the same job
+  const englishSelector = document.getElementById('eng');
+  const farsiSelector = document.getElementById('farsi');
+
+  if (englishSelector.classList.contains('active-language')) {
+    handleGenerateClick(); // Call English words generation
+  } else if (farsiSelector.classList.contains('active-language')) {
+    FarsiGenerateRandomWords(Fars_easyWords, 10) ; // Call Farsi words generation
+  }
 }
 
 // Function to handle select button click
@@ -91,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentWordList = easyWords;
     this.classList.add('active-language');
     farsiSelector.classList.remove('active-language');
-    handleWordGeneration(); 
+    handleGenerateClick(); 
   });
 
   farsiSelector.addEventListener('click', function() {
@@ -99,7 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Optionally highlight the active language
     this.classList.add('active-language');
     englishSelector.classList.remove('active-language');
-    handleWordGeneration(); // Generate words immediately upon language selection
+    ; // Generate words immediately upon language selection
+    FarsiGenerateRandomWords(currentWordList, 10) 
   });
 });
 
