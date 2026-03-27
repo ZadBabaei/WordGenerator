@@ -24,6 +24,9 @@ Server/scripts/farsi-difficulty-cache.json
 text script.py
 New Text Document.txt
 
+# Vercel
+.vercel/
+
 # IDE & tools
 .claude/
 .obsidian/

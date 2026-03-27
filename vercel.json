@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/api/words/:lang", "destination": "/api/words/[lang]" },
+    { "source": "/api/sessions/join", "destination": "/api/sessions/join" },
+    { "source": "/api/sessions/:code/select", "destination": "/api/sessions/[code]/select" },
+    { "source": "/api/sessions/:code", "destination": "/api/sessions/[code]" },
+    { "source": "/api/sessions", "destination": "/api/sessions/index" }
+  ]
+}
