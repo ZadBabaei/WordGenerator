@@ -4,20 +4,162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page2</title>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles2.css">
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Word Generator - Rules</title>
 </head>
 <body>
-    <h1>
-        Hey!
-    </h1>
-    <div id="particles-js"></div>
-    <script>
-  particlesJS.load('particles-js', './asset/particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+<header>
+    <nav class="navbar">
+        <div class="logo">WG</div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./session.html">Session</a>
+            <a href="./Words.html">Words</a>
+            <a href="./clock.html">Timer</a>
+            <a href="./rules.html" class="active">Rules</a>
+        </div>
+    </nav>
+</header>
+
+<main class="rules-container">
+    <div class="rules-toggle">
+        <button class="lang-btn active-language" id="rulesEn">English</button>
+        <button class="lang-btn" id="rulesFa">فارسی</button>
+    </div>
+
+    <!-- English Rules -->
+    <div class="rules-content" id="rulesEnContent">
+        <h1>How to Play <span class="highlight">The Word Game</span></h1>
+
+        <section class="rule-section">
+            <h2>Setup</h2>
+            <ul>
+                <li>You need an <strong>even number of players</strong> (4, 6, 8...)</li>
+                <li>Sit in a circle. The people on your left and right are your <strong>opponents</strong></li>
+                <li>Every other person around the circle is your <strong>teammate</strong></li>
+                <li>Each player uses the app to generate <strong>4-5 words</strong> (use a session to avoid duplicates!)</li>
+                <li>Write each word on a separate piece of paper and put them all in the <strong>main bowl</strong></li>
+                <li>Each team gets their own empty bowl</li>
+            </ul>
+        </section>
+
+        <section class="rule-section round round-1">
+            <h2>Round 1 — Describe It</h2>
+            <div class="round-details">
+                <span class="round-timer">45 seconds</span>
+                <span class="round-skips">Unlimited skips</span>
+            </div>
+            <p>Pick a word from the main bowl and <strong>describe it using sentences</strong>. You cannot say the word itself! If your team guesses correctly, put the paper in your team's bowl and grab the next word. Keep going until time runs out.</p>
+            <p>The next player on the opposing team goes next. Continue until the main bowl is empty. Count each team's papers — <strong>most papers wins the round!</strong></p>
+        </section>
+
+        <section class="rule-section round round-2">
+            <h2>Round 2 — One Word</h2>
+            <div class="round-details">
+                <span class="round-timer">35 seconds</span>
+                <span class="round-skips">1 skip only</span>
+            </div>
+            <p>All papers go back into the main bowl. This time, you can only say <strong>one single word</strong> to describe what's on the paper. No miming, no sentences — just one word! Say your word and wait for your team to guess.</p>
+            <p>Team with most papers wins again!</p>
+        </section>
+
+        <section class="rule-section round round-3">
+            <h2>Round 3 — Mime It</h2>
+            <div class="round-details">
+                <span class="round-timer">30 seconds</span>
+                <span class="round-skips">No skips</span>
+            </div>
+            <p>All papers back in the main bowl one last time. Now you must <strong>mime the word</strong> — no talking at all! If your team can't guess it, keep miming until they get it or time runs out.</p>
+            <p>Team with the most papers wins the round and the game!</p>
+        </section>
+
+        <section class="rule-section">
+            <h2>Tips</h2>
+            <ul>
+                <li>Pay attention in Round 1 — you'll see the same words in Rounds 2 and 3!</li>
+                <li>Mix difficulty levels for more fun: some easy words and some challenging ones</li>
+                <li>Use the Session feature so no two players get the same words</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Farsi Rules -->
+    <div class="rules-content hidden" id="rulesFaContent" dir="rtl">
+        <h1>قوانین <span class="highlight">بازی کلمات</span></h1>
+
+        <section class="rule-section">
+            <h2>آماده‌سازی</h2>
+            <ul>
+                <li>تعداد بازیکنان باید <strong>زوج</strong> باشد (۴، ۶، ۸...)</li>
+                <li>دور هم بنشینید. نفرات سمت چپ و راست شما <strong>حریف</strong> هستند</li>
+                <li>هر نفر یکی در میان <strong>هم‌تیمی</strong> شماست</li>
+                <li>هر بازیکن با استفاده از اپلیکیشن <strong>۴ تا ۵ کلمه</strong> انتخاب می‌کند</li>
+                <li>هر کلمه را روی یک تکه کاغذ بنویسید و همه را در <strong>کاسه اصلی</strong> بریزید</li>
+                <li>هر تیم یک کاسه خالی برای خودش دارد</li>
+            </ul>
+        </section>
+
+        <section class="rule-section round round-1">
+            <h2>دور اول — توضیح بده</h2>
+            <div class="round-details">
+                <span class="round-timer">۴۵ ثانیه</span>
+                <span class="round-skips">رد کردن نامحدود</span>
+            </div>
+            <p>یک کاغذ از کاسه اصلی بردارید و کلمه را <strong>با جمله توضیح دهید</strong>. نباید خود کلمه را بگویید! اگر تیمتان حدس زد، کاغذ را در کاسه تیمتان بیندازید و کلمه بعدی را بردارید.</p>
+            <p>تیمی که بیشترین کاغذ را داشته باشد <strong>برنده این دور است!</strong></p>
+        </section>
+
+        <section class="rule-section round round-2">
+            <h2>دور دوم — یک کلمه</h2>
+            <div class="round-details">
+                <span class="round-timer">۳۵ ثانیه</span>
+                <span class="round-skips">فقط ۱ بار رد کردن</span>
+            </div>
+            <p>همه کاغذها به کاسه اصلی برمی‌گردند. این بار فقط <strong>یک کلمه</strong> می‌توانید بگویید. بدون حرکت، بدون جمله — فقط یک کلمه!</p>
+            <p>تیمی که بیشترین کاغذ را جمع کند برنده است!</p>
+        </section>
+
+        <section class="rule-section round round-3">
+            <h2>دور سوم — ادا درآر</h2>
+            <div class="round-details">
+                <span class="round-timer">۳۰ ثانیه</span>
+                <span class="round-skips">بدون رد کردن</span>
+            </div>
+            <p>کاغذها دوباره به کاسه اصلی برمی‌گردند. حالا باید کلمه را <strong>ادا درآورید</strong> — هیچ حرفی نزنید! اگر تیمتان نتوانست حدس بزند، ادامه دهید تا وقتتان تمام شود.</p>
+            <p>تیمی که بیشترین کاغذ را داشته باشد برنده بازی است!</p>
+        </section>
+
+        <section class="rule-section">
+            <h2>نکات</h2>
+            <ul>
+                <li>در دور اول خوب دقت کنید — همان کلمات در دورهای ۲ و ۳ هم هستند!</li>
+                <li>سطح سختی کلمات را ترکیب کنید: چند تا آسان و چند تا سخت</li>
+                <li>از قابلیت Session استفاده کنید تا هیچ دو بازیکنی کلمه تکراری نگیرند</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer class="social-links">
+    <a href="#" class="social-icon">In</a>
+    <a href="#" class="social-icon">TW</a>
+    <a href="#" class="social-icon">FB</a>
+    <a href="#" class="social-icon">GH</a>
+</footer>
+
+<script>
+    document.getElementById('rulesEn').addEventListener('click', function () {
+        document.getElementById('rulesEnContent').classList.remove('hidden');
+        document.getElementById('rulesFaContent').classList.add('hidden');
+        this.classList.add('active-language');
+        document.getElementById('rulesFa').classList.remove('active-language');
+    });
+    document.getElementById('rulesFa').addEventListener('click', function () {
+        document.getElementById('rulesFaContent').classList.remove('hidden');
+        document.getElementById('rulesEnContent').classList.add('hidden');
+        this.classList.add('active-language');
+        document.getElementById('rulesEn').classList.remove('active-language');
+    });
 </script>
 </body>
 </html>

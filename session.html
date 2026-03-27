@@ -3,47 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles2.css">
-    <title>Session</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Word Generator - Session</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">GE</div>
-            <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./Words.html">Words</a>
-                <a href="./rules.html">Rules</a>
-                <a href="./clock.html">Clock</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <div class="main-container">
-        <div class="sessionStartCrd">
-            <div  class="text-and-lable">
-                <label>Your name:</label>
-                <input type="text" name="" id="name">
-            </div>
-            <div  class="text-and-lable">
-                <label># of players:</label>
-                <input type="number" name="" id="numOfPlayers">
-            </div>       
-            <button class="start-button" id=" start-button" onclick="generateQrCode()" >Start New Session </button>
+<header>
+    <nav class="navbar">
+        <div class="logo">WG</div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./session.html" class="active">Session</a>
+            <a href="./Words.html">Words</a>
+            <a href="./clock.html">Timer</a>
+            <a href="./rules.html">Rules</a>
         </div>
-        <div class="image-QrCode" id="imageQrCode">
-            <img src="./asset/qrcode_example_1.png" alt="QrCode">
+    </nav>
+</header>
+
+<div class="session-container">
+    <!-- Create Session Section -->
+    <div class="session-card" id="createSection">
+        <h2>Create New Session</h2>
+        <div class="input-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="input-group">
+            <label for="sessionLang">Language:</label>
+            <select id="sessionLang">
+                <option value="en">English</option>
+                <option value="fa">فارسی (Farsi)</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" id="createBtn">Create Session</button>
+    </div>
+
+    <!-- Join Session Section -->
+    <div class="session-card" id="joinSection">
+        <h2>Join Session</h2>
+        <div class="input-group">
+            <label for="joinName">Your Name:</label>
+            <input type="text" id="joinName" placeholder="Enter your name">
+        </div>
+        <div class="input-group">
+            <label for="joinCode">Room Code:</label>
+            <input type="text" id="joinCode" placeholder="e.g. A3F7K2" maxlength="6" style="text-transform: uppercase;">
+        </div>
+        <button class="btn btn-primary" id="joinBtn">Join Session</button>
+    </div>
+
+    <!-- Room Code Display (hidden by default) -->
+    <div class="room-code-display hidden" id="roomCodeDisplay">
+        <h2>Room Code</h2>
+        <div class="room-code" id="roomCode">------</div>
+        <p class="room-hint">Share this code with your friends!</p>
+
+        <div class="player-list-section">
+            <h3>Players (<span id="playerCount">0</span>)</h3>
+            <ul class="player-list" id="playerList"></ul>
         </div>
 
+        <button class="btn btn-primary" id="goToWordsBtn">Go to Words →</button>
     </div>
-        <footer class="social-links">
-        <!-- Icons for social links can be added here -->
-        <a href="#" class="social-icon">In</a>
-        <a href="#" class="social-icon">TW</a>
-        <a href="#" class="social-icon">FB</a>
-        <a href="#" class="social-icon">RD</a>
-        <a href="#" class="social-icon">GH</a>
-    </footer>
-    <script src="./session.js"></script>    
+</div>
+
+<footer class="social-links">
+    <a href="#" class="social-icon">In</a>
+    <a href="#" class="social-icon">TW</a>
+    <a href="#" class="social-icon">FB</a>
+    <a href="#" class="social-icon">GH</a>
+</footer>
+
+<script src="./js/api.js"></script>
+<script src="./js/session.js"></script>
 </body>
 </html>

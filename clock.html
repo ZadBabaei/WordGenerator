@@ -4,48 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="Clock-styles.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>Page3</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Word Generator - Timer</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">GE</div>
-            <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./page1.html">Words</a>
-                <a href="./page3.html">rules</a>
-                <a href="./clock.html">clock</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <main class="main-container">
-        <section class="left-part">
-            <!-- Making numbers clickable -->
-            <h1 class="countdown-number" data-time="45">45</h1>
-            <h1 class="countdown-number" data-time="35">35</h1>
-            <h1 class="countdown-number" data-time="30">30</h1>
-        </section>
-        <div class="right-section">
-            <!-- Display countdown here -->
-            <div id="countdown-display">00</div>
-            <button id="reset-button" class="reset-button">Reset</button>
+<header>
+    <nav class="navbar">
+        <div class="logo">WG</div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./session.html">Session</a>
+            <a href="./Words.html">Words</a>
+            <a href="./clock.html" class="active">Timer</a>
+            <a href="./rules.html">Rules</a>
         </div>
-    </main>
-     <footer class="social-links">
-        <!-- Icons for social links can be added here -->
-        <a href="#" class="social-icon">In</a>
-        <a href="#" class="social-icon">TW</a>
-        <a href="#" class="social-icon">FB</a>
-        <a href="#" class="social-icon">RD</a>
-        <a href="#" class="social-icon">GH</a>
-    </footer>
-        
-    <script src="clock.js" >
-    </script>
+    </nav>
+</header>
+
+<main class="timer-container">
+    <section class="timer-presets">
+        <h2>Round Timers</h2>
+        <div class="preset-buttons">
+            <button class="countdown-number" data-time="45">
+                <span class="preset-time">45</span>
+                <span class="preset-label">Round 1</span>
+            </button>
+            <button class="countdown-number" data-time="35">
+                <span class="preset-time">35</span>
+                <span class="preset-label">Round 2</span>
+            </button>
+            <button class="countdown-number" data-time="30">
+                <span class="preset-time">30</span>
+                <span class="preset-label">Round 3</span>
+            </button>
+        </div>
+    </section>
+    <section class="timer-display">
+        <div id="countdown-display">00</div>
+        <button id="reset-button" class="btn">Reset</button>
+    </section>
+</main>
+
+<footer class="social-links">
+    <a href="#" class="social-icon">In</a>
+    <a href="#" class="social-icon">TW</a>
+    <a href="#" class="social-icon">FB</a>
+    <a href="#" class="social-icon">GH</a>
+</footer>
+
+<script src="./js/clock.js"></script>
 </body>
 </html>

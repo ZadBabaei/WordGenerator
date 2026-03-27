@@ -5,54 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Word Generator</title>
+    <title>Word Generator - Words</title>
 </head>
 <body>
-    
-    <header>
-        <nav class="navbar">
-            <div class="logo">ZB</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="./index.html">Home</a>
-                <a href="./page1.html">Words</a>
-                <a href="./clock.html">Timer</a>
-                <a href="#contact">Contact</a>
+<header>
+    <nav class="navbar">
+        <div class="logo">WG</div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./session.html">Session</a>
+            <a href="./Words.html" class="active">Words</a>
+            <a href="./clock.html">Timer</a>
+            <a href="./rules.html">Rules</a>
+        </div>
+    </nav>
+</header>
+
+<div class="wordsPageContainer">
+    <div class="topPageInput">
+        <div class="input-group">
+            <label for="playerName">Player's Name:</label>
+            <input type="text" id="playerName" placeholder="Your name">
+        </div>
+        <div class="input-group">
+            <label for="sessionCode">Session Code:</label>
+            <input type="text" id="sessionCode" placeholder="e.g. A3F7K2" maxlength="6" style="text-transform: uppercase;">
+        </div>
+        <div class="lang-buttons">
+            <button class="lang-btn" id="eng">English</button>
+            <button class="lang-btn" id="farsi">فارسی</button>
+        </div>
+    </div>
+
+    <div class="difficulty-selector">
+        <h3>Choose your words:</h3>
+        <div class="difficulty-inputs">
+            <div class="diff-input">
+                <label for="easyCount">Easy</label>
+                <input type="number" id="easyCount" min="0" max="10" value="2">
             </div>
-        </nav>
-<div class="topPageInput">
-        <div class="name-input">
-            <label for="playerName">Player’s Name:</label>
-            <input type="text" id="playerName">
-        </div>
-            <button   class = "lang-farsi" id ="farsi" >Farsi</button>
-            <button   class = "lang-eng" id = "eng" >English</button>
-        </div>
-
-        <div class="word-list"  id="rightCard">
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque id ipsam tenetur, in, facere illo voluptatem rem adipisci minus,
-         voluptates possimus consequuntur ad deserunt. Rem sunt harum illum autem eum.
-      </p>
-        </div>
-        <div class="buttons">
-            <button class="btn" id="generate"> Generate</button>
-            <button class="btn" id="reload">reload</button>
-            <button class="btn" id="select">Select</button>
+            <div class="diff-input">
+                <label for="moderateCount">Moderate</label>
+                <input type="number" id="moderateCount" min="0" max="10" value="1">
+            </div>
+            <div class="diff-input">
+                <label for="hardCount">Hard</label>
+                <input type="number" id="hardCount" min="0" max="10" value="1">
+            </div>
         </div>
     </div>
+
+    <div class="word-list" id="rightCard">
+        <p>Click "Generate" to get your words!</p>
     </div>
 
-        <footer class="social-links">
-        <!-- Icons for social links can be added here -->
-        <a href="#" class="social-icon">In</a>
-        <a href="#" class="social-icon">TW</a>
-        <a href="#" class="social-icon">FB</a>
-        <a href="#" class="social-icon">RD</a>
-        <a href="#" class="social-icon">GH</a>
-    </footer>
+    <div class="buttons">
+        <button class="btn" id="generate">Generate</button>
+        <button class="btn" id="reload">Reload</button>
+        <button class="btn btn-select" id="select">Lock In Words</button>
+    </div>
+</div>
 
-    <script src="App.js" >
-    </script>
+<footer class="social-links">
+    <a href="#" class="social-icon">In</a>
+    <a href="#" class="social-icon">TW</a>
+    <a href="#" class="social-icon">FB</a>
+    <a href="#" class="social-icon">GH</a>
+</footer>
+
+<script src="./js/api.js"></script>
+<script src="./js/app.js"></script>
 </body>
 </html>

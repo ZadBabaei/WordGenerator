@@ -4,51 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <title>Word Generator</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">GE</div>
-            <div class="nav-links">
-                <a href="#Home">Home</a>
-                <a href="./Words.html">Words</a>
-                <a href="./rules.html">Rules</a>
-                <a href="./clock.html">Timer</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div id="particles-js"></div>
-        <main class="content">
-            <section class="intro">
-                <h1>Welcome to Word Generator</h1>
-                <p>Here to play a fun Game with your friends? Please visit the Rule page to find Out about all the rules and regulation of the game</p>
-                <a href="./session.html" >
-                    <button class="start-button">Start Game</button>
+<header>
+    <nav class="navbar">
+        <div class="logo">WG</div>
+        <div class="nav-links">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./session.html">Session</a>
+            <a href="./Words.html">Words</a>
+            <a href="./clock.html">Timer</a>
+            <a href="./rules.html">Rules</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div id="particles-js"></div>
+    <main class="content home-content">
+        <section class="intro">
+            <h1>Welcome to <span class="highlight">Word Game</span></h1>
+            <p>A fun party game for friends! Describe, guess, and mime your way to victory in 3 exciting rounds.</p>
+            <div class="home-buttons">
+                <a href="./session.html">
+                    <button class="btn btn-primary btn-large">Start Session</button>
                 </a>
-            </section>
-            <section class="image-container">
-                <img src="./graphic01 .png" alt="Random word"> 
-            </section>
-        </main>
-    </div>
-    <footer class="social-links">
-        <!-- Icons for social links can be added here -->
-        <a href="#" class="social-icon">In</a>
-        <a href="#" class="social-icon">TW</a>
-        <a href="#" class="social-icon">FB</a>
-        <a href="#" class="social-icon">RD</a>
-        <a href="#" class="social-icon">GH</a>
-    </footer>
-        
-    <script>
-        particlesJS.load('particles-js', './asset/particlesjs-config.json', function() {
-            console.log('callback - particles.js config loaded');
-        });
-    </script>
+                <a href="./rules.html">
+                    <button class="btn btn-large">How to Play</button>
+                </a>
+            </div>
+        </section>
+        <section class="image-container">
+            <img src="./asset/graphic01 .png" alt="Word Game">
+        </section>
+    </main>
+</div>
+
+<footer class="social-links">
+    <a href="#" class="social-icon">In</a>
+    <a href="#" class="social-icon">TW</a>
+    <a href="#" class="social-icon">FB</a>
+    <a href="#" class="social-icon">GH</a>
+</footer>
+
+<script>
+    particlesJS.load('particles-js', './asset/particlesjs-config.json', function () {});
+</script>
 </body>
 </html>

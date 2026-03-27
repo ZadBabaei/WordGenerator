@@ -1,2 +1,34 @@
-# Environment variables
+# Environment & secrets
 .env
+Server/.env
+
+# Dependencies
+node_modules/
+Server/node_modules/
+
+# Word data (protect word lists from public access)
+asset/English Words.csv
+asset/English Words.txt
+asset/eng_words.CSV
+asset/farsi-words.csv
+asset/New Text Document.txt
+
+# AI classification caches
+Server/scripts/english-difficulty-cache.json
+Server/scripts/farsi-difficulty-cache.json
+
+# Unnecessary large/temp files
+*.xlsx
+*.zip
+*.log
+text script.py
+New Text Document.txt
+
+# IDE & tools
+.claude/
+.obsidian/
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
