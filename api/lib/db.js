@@ -7,10 +7,12 @@ function getPool() {
         const dbUrl = process.env.DATABASE_URL;
 
         if (dbUrl) {
-            // PlanetScale / cloud MySQL via connection string
+            // TiDB Serverless / cloud MySQL via connection string
             pool = mysql.createPool({
                 uri: dbUrl,
                 ssl: { rejectUnauthorized: true },
+                enableKeepAlive: true,
+                keepAliveInitialDelay: 10000,
                 waitForConnections: true,
                 connectionLimit: 5,
                 queueLimit: 0
