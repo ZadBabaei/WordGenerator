@@ -198,3 +198,78 @@ flex-direction: column;
     order: -1; /* Image above the text on smaller screens */
 }
 }
+
+
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Reduce gap as elements will be stacked */
+  }
+  .sessionStartCrd {
+    width: 80%; /* Increase width for smaller screens */
+    height: auto; /* Adjust height to be automatic */
+    padding: 2rem; /* Reduce padding */
+  }
+  .text-and-lable {
+    flex-direction: column; /* Stack label and input vertically */
+  }
+  .text-and-lable input {
+    width: 100%; /* Full width for smaller screens */
+  }
+  .image-QrCode {
+    width: 80%; /* Adjust image width for smaller screens */
+    display: block; /* Show image if it's initially hidden */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar, .container, .content, .intro, .image-container {
+    padding: 0 1rem; /* Reduce padding on smaller screens */
+  }
+  .nav-links a {
+    font-size: 0.8rem; /* Reduce font size for nav links */
+  }
+  .logo {
+    padding: 0.25rem; /* Reduce logo padding */
+  }
+  .content, .social-links {
+    flex-direction: column;
+    align-items: center; /* Center content for smaller screens */
+  }
+  .image-container img {
+    height: auto; /* Adjust image height for aspect ratio */
+  }
+  .start-button {
+    font-size: 0.9rem; /* Reduce font size for start button */
+  }
+}
+
+@media (max-width: 480px) {
+  .sessionStartCrd {
+    width: 90%; /* Further increase width for very small screens */
+    gap: 2rem; /* Adjust gap for elements inside */
+  }
+  .text-and-lable {
+    gap: 0.5rem; /* Reduce gap between label and input */
+  }
+  .intro h1 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+  .intro p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+  .social-icon {
+    width: 2rem; /* Reduce social icon size */
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0.25rem;
+  }
+}
+
+/* Additional media query for very small devices */
+@media (max-width: 320px) {
+  .text-and-lable input {
+    padding: 0.5rem; /* Adjust padding for input fields */
+  }
+}
